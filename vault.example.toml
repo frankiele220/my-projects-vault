@@ -1,0 +1,31 @@
+# Copy to vault.toml (never committed) and fill in. Every value can also be set with the environment variable in brackets.
+
+[paths]
+archive = "~/Archive"                                        # [VAULT_ARCHIVE] the folder of old project files, read only
+data = "~/Library/Application Support/MyProjectsVault"       # [VAULT_DATA] database and picture library
+seed_db = ""                                                 # [VAULT_SEED] optional catalogue to import projects from once
+
+[portfolio]
+owner = "Your Name"                  # [VAULT_OWNER] shown on the portfolio page and the PDF
+company = "Your Agency"              # [VAULT_COMPANY] where client projects were delivered; leave empty to leave it out
+photo = "/me.jpg"                    # [VAULT_PHOTO] site path of your photo
+pdf_name = "Portfolio.pdf"           # [VAULT_PDF_NAME]
+
+[tools]
+chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"   # [VAULT_CHROME] used to print the PDF
+
+[jev]
+release = "2b"                       # [VAULT_JEV_RELEASE]
+backend = "mlx"                      # [VAULT_JEV_BACKEND]
+
+[run]
+rest = 1.0                           # [VAULT_REST] rest this many times the work time after each document (1.0 = half speed)
+redact = false                       # [VAULT_REDACT] cover private text and faces when saving pictures
+
+[rules]
+generic_folders = []                 # folder-name words to ignore when matching projects, e.g. ["acme"]
+
+[llm]
+claude_model = "haiku"               # [VAULT_CLAUDE_MODEL] optional second opinion
+# the case-study writer reads OPENROUTER_API_KEY or ~/.config/myprojectsvault/openrouter.key,
+# model from VAULT_LLM_MODEL (default google/gemini-2.5-flash)

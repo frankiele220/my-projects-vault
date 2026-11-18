@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.egg-info/
+.DS_Store
+# the database and the picture library live outside the repo; never commit data
+data/
+*.db
+*.png
+*.jpg
+out/
+
+# personal settings
+vault.toml
+!docs/images/*.png

@@ -1,0 +1,32 @@
+[project]
+name = "myprojectsvault"
+version = "0.1.0"
+description = "Turn years of project files into a sorted library of real screens and short case studies, sorted on your Mac by a small local AI model, then build a portfolio from it."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Loc Le" }]
+requires-python = ">=3.11"
+dependencies = [
+  "jev-style[mlx]==0.6.3",
+  "numpy",
+  "pyobjc-framework-Quartz==11.1",
+  "pyobjc-framework-Vision==11.1",
+]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+vault = "myprojectsvault.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["myprojectsvault"]
+
+[tool.setuptools.package-data]
+myprojectsvault = ["monitor.html"]
